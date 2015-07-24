@@ -1,3 +1,9 @@
 .header h1 {
-	color: red;
+	color: green;
+	font-size: 32px;
+}
+
+.header p {
+	color: red
+	font-size: 22px;
 }
