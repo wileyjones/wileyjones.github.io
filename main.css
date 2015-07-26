@@ -10,12 +10,12 @@
 .right-inner-addon {
 	position: relative;
 	top: 8px;
-	right: 1px;
+	right: 25px;
 	height: 3px;
 }
 
 .right-inner-addon input {
-	padding-right: 100px;
+	padding-right: 60px;
 }
 
 .right-inner-addon i {
