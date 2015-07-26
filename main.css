@@ -1,6 +1,34 @@
-body {
-  padding-top: 50px;
+/*NAV STYLING */
+.navbar-wrapper {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 20;
 }
+
+.right-inner-addon {
+	position: relative;
+	top: 8px;
+	right: 1px;
+	height: 3px;
+}
+
+.right-inner-addon input {
+	padding-right: 30px;
+}
+
+.right-inner-addon i {
+	position: absolute;
+	right: 8px;
+	padding: 10px 12px;
+	pointer-events: none;
+}
+
+
+
+/*NAV STYLING */
+
 
 .jumbotron {
 	background-image:url('http://www.apex-expeditions.com/wp-content/uploads/2014/04/patagoniaSlider_Torres-del-Paine_1366x601.jpg');

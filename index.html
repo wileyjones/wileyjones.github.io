@@ -11,34 +11,64 @@
 
     <title>Welcome</title>
 
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="main.css" rel="stylesheet">
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
   </head>
 
   <body>
+    
+    <!-- NAVBAR -->
+<!--=======================================================================================-->
+    <nav class="navbar-wrapper">
+        <div class="container">
+          <div class="navbar navbar-default navbar-static-top" role="navigation">
+              <div class="container">
+                
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Wiley Jones</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about me">About Me </a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+                    <a class="navbar-brand" href="#">Website Name</a>              
 
+                </div> <!--end of header-->
+
+                <div class="navbar-collapse collapse">
+                  <div class="right-inner-addon pull-right">
+
+                    <i class="fa fa-search"></i>
+                    <input type="search" class="form-control" placeholder="Search" />
+
+
+                  </div> <!-- end of add on-->
+
+                  <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">home</a></li>
+                    <li><a href="#about">about</a></li>  
+                    <li><a href="#contact">contact me</a></li>
+
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    </li>
+                  </ul>
+
+                </div> <!-- end of collapse-->
+
+
+              </div> <!--end of container-->  
+          </div> <!--end of navbar-->  
+        </div> <!--end of container-->
+    </nav> <!-- end of NAVwrapper-->
+<!--=======================================================================================-->
+
+
+    <!-- MAIN PAGE HEADER-->
+<!--=======================================================================================-->    
     <div class="jumbotron">
       <div class="container">
 
@@ -53,6 +83,7 @@
 
       </div>
     </div>
+<!--=======================================================================================-->    
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
