@@ -1,18 +1,26 @@
+body {
+  padding-top: 50px;
+}
+
 .jumbotron {
 	background-image:url('http://www.apex-expeditions.com/wp-content/uploads/2014/04/patagoniaSlider_Torres-del-Paine_1366x601.jpg');
-	height: 500px;
+	height: 600px;
   	background-repeat: no-repeat;
   	background-size: cover;
 }
 
-.jumbotron .title {
-	color: #fff;
-    font-size: 48px;  
- 	font-family: 'Shift', sans-serif;
-    font-weight: bold;
+.jumbotron .textoverlay {
+	text-align: center
 }
 
-.jumbotron .caption {
-  font-size: 20px;
-  color: #fff;
+
+.jumbotron .textoverlay h1 {
+	font-size: 52px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.jumbotron .textoverlay p {
+	font-size: 26px;
+	color: #fff;
 }
