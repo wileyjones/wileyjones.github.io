@@ -15,12 +15,12 @@
 }
 
 .right-inner-addon input {
-	padding-right: 30px;
+	padding-right: 40px;
 }
 
 .right-inner-addon i {
 	position: absolute;
-	right: 8px;
+	right: 5px;
 	padding: 10px 12px;
 	pointer-events: none;
 }
