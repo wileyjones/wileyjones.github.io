@@ -1,106 +1,168 @@
-/*NAV STYLING */
-.navbar-wrapper {
-	position: absolute;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 20;
-}
-
-.right-inner-addon {
-	position: relative;
-	top: 8px;
-	right: 25px;
-	height: 3px;
-}
-
-.right-inner-addon input {
-	padding-right: 60px;
-}
-
-.right-inner-addon i {
-	position: absolute;
-	right: 5px;
-	padding: 10px 12px;
-	pointer-events: none;
-}
-
-/*NAV STYLING */
+/*NAV STYLING ============================= */
+/*NAV STYLING ============================ */
 
 
-.main-page .jumbotron {
-	background-image:url('http://www.apex-expeditions.com/wp-content/uploads/2014/04/patagoniaSlider_Torres-del-Paine_1366x601.jpg');
-	height: 600px;
-  	background-repeat: no-repeat;
-  	background-size: cover;
-}
+/*MAIN STYLING ============================ */
+	
+	.main-page .jumbotron {
+		background-image:url('http://magic-cleaners.com/wp-content/uploads/2012/07/cropped-1142823461.jpg');
+		height: 400px;
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	}
 
-.main-page .jumbotron .textoverlay {
-	text-align: center
-}
-
-
-.main-page .jumbotron .textoverlay h1 {
-	font-size: 52px;
-	font-family: 'Shift', sans-serif;
-	font-weight: bold;
-	color: #fff;
-}
-
-.main-page .jumbotron .textoverlay p {
-	font-size: 26px;
-	font-family: 'Shift', sans-serif;
-	color: #fff;
-}
-
-.social-media .jumbotron h1 {
-	font-size: 42px;
-	font-family: 'Shift', sans-serif;
-	color: #fff;
-	text-align: center;
-}
+	.main-page .jumbotron .textoverlay {
+		text-align: center
+	}
 
 
-/* social media text-size fix*/
-@media (max-width: 650px) {
-  .btn-responsive {
-  	padding: 4px 4px;
-    font-size: 11px;
-    border-radius:3px;
-  }
-}
-/* social media text-size fix*/
+	.main-page .jumbotron .textoverlay h1 {
+		font-size: 100px;
+		font-family: 'Shift', sans-serif;
+		text-shadow: 2px 2px #00aced;
+		font-weight: bold;
+		color: #fff;
+	}
 
-.page-footer p {
-	height: 60px;
-	font-size: 18px;
-	font-family: 'Shift', sans-serif;
-	color: #f7f7f7;
-	text-align: center;
-}
+	.main-page .jumbotron .textoverlay p {
+		font-size: 26px;
+		font-family: 'Shift', sans-serif;
+		color: #fff;
+	}
 
-.social-media .jumbotron {
-	background-color: #333;
-	height: 200px;
-}
+	.main-page .jumbotron .learn-more a {
+		text-align: center;
 
-body {
-	background-color: #333;
-}
+	}
 
-a {
-	color: #333;
-}
+/*MAIN STYLING ============================ */
 
-a:visited {
-    color: #333;
-}
+/*DESC STYLING ============================ */
+	
+	.desc .jumbotron {
+		height: 2800px;
+	  	background-repeat: no-repeat;
+	  	background-size: cover;
+	  	background-color: #333;
+	}
 
-a:active {
-    color: #333;
-}
+	.desc .jumbotron .textoverlay .title h1 {
+		font-size: 56px;
+		font-family: 'Shift', sans-serif;
+		text-shadow: 2px 2px #00aced;
+		font-weight: bold;
+		margin-top: 50px;
+		color: #fff;
+	}
 
-a:hover {
-    color: #333;
-}
+	.desc .jumbotron .textoverlay p {
+		font-size: 26px;
+		font-family: 'Shift', sans-serif;
+		margin: 15px;
+		color: #fff;
+	}
 
+	.desc .jumbotron .textoverlay .title-1 h1 {
+		font-size: 56px;
+		font-family: 'Shift', sans-serif;
+		text-shadow: 2px 2px #ff3a00;
+		font-weight: bold;
+		margin-top: 50px;
+		color: #fff;
+	}
+
+	.desc .jumbotron .textoverlay .title-2 h1 {
+		font-size: 56px;
+		font-family: 'Shift', sans-serif;
+		text-shadow: 2px 2px #3b5998;
+		font-weight: bold;
+		margin-top: 50px;
+		color: #fff;
+	}
+
+	.desc .jumbotron .textoverlay .disclaimer h1 {
+		font-size: 26px;
+		font-family: 'Shift', sans-serif;
+		margin-top: 100px;
+		text-align: center;
+		color: #fff;
+	}
+
+	.desc .jumbotron .textoverlay .googform {
+		margin: 25px;
+	}
+
+
+	.desc .jumbotron .textoverlay img {
+		margin: 25px;
+	}
+
+/*DESC STYLING ============================ */
+
+/*SOCIAL STYLING ============================ */
+
+	.social-media .jumbotron h1 {
+		font-size: 42px;
+		font-family: 'Shift', sans-serif;
+		color: #fff;
+		text-align: center;
+	}
+
+
+	/* social media text-size fix*/
+	@media (max-width: 650px) {
+	  .btn-responsive {
+	  	padding: 4px 4px;
+	    font-size: 11px;
+	    border-radius:3px;
+	  }
+	}
+	/* social media text-size fix*/
+
+	.social-media .jumbotron {
+		background-color: #333;
+		height: 200px;
+	}
+
+/*SOCIAL STYLING ============================ */
+
+/*FOOTER STYLING ============================ */
+
+	.page-footer .jumbotron {
+		background-color: #333;
+		height: 100px;
+		
+	}
+	.page-footer p {
+		font-size: 18px;
+		font-family: 'Shift', sans-serif;
+		color: #f7f7f7;
+		text-align: center;
+	}
+
+/*FOOTER STYLING ============================ */
+
+
+/*GLOBAL STYLING ============================ */
+
+	body {
+		background-color: #333;
+	}
+
+	a {
+		color: #333;
+	}
+
+	a:visited {
+	    color: #333;
+	}
+
+	a:active {
+	    color: #333;
+	}
+
+	a:hover {
+	    color: #333;
+	}
+
+/*GLOBAL STYLING ============================ */
