@@ -6,7 +6,6 @@
 	
 	.main-page .jumbotron {
 		background-image:url('http://magic-cleaners.com/wp-content/uploads/2012/07/cropped-1142823461.jpg');
-		height: 400px;
 	  	background-repeat: no-repeat;
 	  	background-size: cover;
 	}
@@ -15,9 +14,8 @@
 		text-align: center
 	}
 
-
 	.main-page .jumbotron .textoverlay h1 {
-		font-size: 100px;
+		font-size: 56px;
 		font-family: 'Shift', sans-serif;
 		text-shadow: 2px 2px #00aced;
 		font-weight: bold;
@@ -39,14 +37,15 @@
 
 /*DESC STYLING ============================ */
 	
-	.desc .jumbotron {
-		height: 2800px;
-	  	background-repeat: no-repeat;
-	  	background-size: cover;
+	.desc {
 	  	background-color: #333;
+	  	margin-top: 50px;
+	  	margin-bottom: 50px;
+	  	margin-left: 10px;
+	  	margin-right: 10px;
 	}
 
-	.desc .jumbotron .textoverlay .title h1 {
+	.desc .textoverlay .title h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
 		text-shadow: 2px 2px #00aced;
@@ -55,14 +54,14 @@
 		color: #fff;
 	}
 
-	.desc .jumbotron .textoverlay p {
+	.desc .textoverlay p {
 		font-size: 26px;
 		font-family: 'Shift', sans-serif;
 		margin: 15px;
 		color: #fff;
 	}
 
-	.desc .jumbotron .textoverlay .title-1 h1 {
+	.desc .textoverlay .title-1 h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
 		text-shadow: 2px 2px #ff3a00;
@@ -71,74 +70,44 @@
 		color: #fff;
 	}
 
-	.desc .jumbotron .textoverlay .title-2 h1 {
+	.desc .textoverlay .title-2 h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
-		text-shadow: 2px 2px #3b5998;
+		text-shadow: 2px 2px #ff3a00;
 		font-weight: bold;
 		margin-top: 50px;
 		color: #fff;
 	}
 
-	.desc .jumbotron .textoverlay .disclaimer h1 {
-		font-size: 26px;
-		font-family: 'Shift', sans-serif;
-		margin-top: 100px;
-		text-align: center;
-		color: #fff;
-	}
 
-	.desc .jumbotron .textoverlay .googform {
-		margin: 25px;
+	.desc .textoverlay .googform {
+		margin-top: 25px;
+		margin-bottom: 25px;
 	}
 
 
-	.desc .jumbotron .textoverlay img {
+	.desc .textoverlay img {
 		margin: 25px;
 	}
 
 /*DESC STYLING ============================ */
 
 /*SOCIAL STYLING ============================ */
-
-	.social-media .jumbotron h1 {
-		font-size: 42px;
-		font-family: 'Shift', sans-serif;
-		color: #fff;
-		text-align: center;
-	}
-
-
-	/* social media text-size fix*/
-	@media (max-width: 650px) {
-	  .btn-responsive {
-	  	padding: 4px 4px;
-	    font-size: 11px;
-	    border-radius:3px;
-	  }
-	}
-	/* social media text-size fix*/
-
-	.social-media .jumbotron {
-		background-color: #333;
-		height: 200px;
-	}
-
 /*SOCIAL STYLING ============================ */
 
 /*FOOTER STYLING ============================ */
 
-	.page-footer .jumbotron {
-		background-color: #333;
-		height: 100px;
-		
-	}
-	.page-footer p {
-		font-size: 18px;
+	.disclaimer h1 {
+		font-size: 26px;
 		font-family: 'Shift', sans-serif;
-		color: #f7f7f7;
 		text-align: center;
+		color: #fff;
 	}
+
+	.disclaimer {
+		background-color: #00aced;		
+	}
+
 
 /*FOOTER STYLING ============================ */
 
@@ -164,5 +133,6 @@
 	a:hover {
 	    color: #333;
 	}
+
 
 /*GLOBAL STYLING ============================ */
