@@ -17,7 +17,7 @@
 
 	.main-page .jumbotron .textoverlay h1 {
 		font-size: 56px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		text-shadow: 2px 2px #00aced;
 		font-weight: bold;
 		color: #fff;
@@ -25,7 +25,7 @@
 
 	.main-page .jumbotron .textoverlay p {
 		font-size: 26px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		color: #fff;
 	}
 
@@ -39,7 +39,7 @@
 /*DESC STYLING ============================ */
 	
 	.desc {
-	  	background-color: #333;
+	  	background-color: #fff;
 	  	margin-top: 50px;
 	  	margin-bottom: 50px;
 	  	margin-left: 10px;
@@ -48,36 +48,36 @@
 
 	.desc .textoverlay .title h1 {
 		font-size: 56px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		/*text-shadow: 2px 2px #00aced;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #23cf5f;
+		color: #00aced;
 	}
 
 	.desc .textoverlay p {
 		font-size: 26px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		margin: 15px;
-		color: #fff;
+		color: #333;
 	}
 
 	.desc .textoverlay .title-1 h1 {
 		font-size: 56px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		/*text-shadow: 2px 2px #ff3a00;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #23cf5f;
+		color: #00aced;
 	}
 
 	.desc .textoverlay .title-2 h1 {
 		font-size: 56px;
-		font-family: 'Shift', sans-serif;
+		/*font-family: 'Shift', sans-serif;*/
 		/*text-shadow: 2px 2px #ff3a00;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #23cf5f;
+		color: #00aced;
 	}
 
 
@@ -105,7 +105,7 @@
 
 	.disclaimer h1 {
 		font-size: 26px;
-		font-family: 'Shift', sans-serif;
+	/*font-family: 'Shift', sans-serif;*/
 		text-align: center;
 		color: #fff;
 	}
@@ -121,7 +121,7 @@
 /*GLOBAL STYLING ============================ */
 
 	body {
-		background-color: #333;
+		background-color: #fff;
 	}
 
 	a {
@@ -139,6 +139,10 @@
 	a:hover {
 	    color: #333;
 	}
+
+	body {
+		font-family: Arial, Helvetica, sans-serif;
+		}
 
 
 /*GLOBAL STYLING ============================ */
