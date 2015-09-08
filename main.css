@@ -49,10 +49,10 @@
 	.desc .textoverlay .title h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
-		text-shadow: 2px 2px #00aced;
+		/*text-shadow: 2px 2px #00aced;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #fff;
+		color: #23cf5f;
 	}
 
 	.desc .textoverlay p {
@@ -65,19 +65,19 @@
 	.desc .textoverlay .title-1 h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
-		text-shadow: 2px 2px #ff3a00;
+		/*text-shadow: 2px 2px #ff3a00;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #fff;
+		color: #23cf5f;
 	}
 
 	.desc .textoverlay .title-2 h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
-		text-shadow: 2px 2px #ff3a00;
+		/*text-shadow: 2px 2px #ff3a00;*/
 		font-weight: bold;
 		margin-top: 50px;
-		color: #fff;
+		color: #23cf5f;
 	}
 
 
