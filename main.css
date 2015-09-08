@@ -5,7 +5,8 @@
 /*MAIN STYLING ============================ */
 	
 	.main-page .jumbotron {
-		background-image:url('http://magic-cleaners.com/wp-content/uploads/2012/07/cropped-1142823461.jpg');
+		/*background-image:url('http://magic-cleaners.com/wp-content/uploads/2012/07/cropped-1142823461.jpg');*/
+		background-color: #00aced;
 	  	background-repeat: no-repeat;
 	  	background-size: cover;
 	}
@@ -17,7 +18,7 @@
 	.main-page .jumbotron .textoverlay h1 {
 		font-size: 56px;
 		font-family: 'Shift', sans-serif;
-		text-shadow: 2px 2px #00aced;
+		text-shadow: 2px 2px #333;
 		font-weight: bold;
 		color: #fff;
 	}
