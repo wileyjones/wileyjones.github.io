@@ -3,11 +3,11 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  color: white;
+  color: #95a5a6;
 }
 
 h1 {
-  text-shadow: black 0.3em 0.3em 0.3em;
+  text-shadow: #95a5a6 0.2em 0.2em 0.2em;
 }
 
 
@@ -42,13 +42,13 @@ h1 {
 
 .landing .jumbotron {
   text-align: center;
-  background-image: url(http://www.wired.com/wp-content/uploads/2015/09/SPoW_Sept20-26_04-1024x640.jpg);
+  background-color: white;
   background-position: 100% 0%;
   background-size: cover;
   background-repeat: no-repeat;
   margin-bottom: 0px;
   margin-top: 0px;
-  color: white;
+  color: #95a5a6;
   height: 1600px;
 }
 
@@ -68,13 +68,13 @@ h1 {
 
 .social h2 {
   font-weight: normal;
-  color: white;
+  color: #95a5a6;
 
 }
 
 .social p {
   font-weight: normal;
-  color: white;
+  color: #95a5a6;
 
 }
 
@@ -92,10 +92,10 @@ h1 {
 ------------------------- */
 
 .projects h3 {
-  color: white;
+  color: #95a5a6;
   vertical-align: middle;
   font-size: 52px;
-  text-shadow: black 0.3em 0.3em 0.3em;
+  text-shadow: #95a5a6 0.2em 0.2em 0.2em;
 }
 
 
