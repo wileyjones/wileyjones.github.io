@@ -1,5 +1,5 @@
 function main() {
-    $.getJSON("res/JSdata.json", function (jsonData) {
+    $.getJSON("JSdata.json", function (jsonData) {
 
     		// Establishing sets of variable for each item of data list
 			var platform = jsonData[0];
