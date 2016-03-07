@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Weather CRUD App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+
+    <script src="myApp.js"></script>
+
+  </head>
+
+  <body ng-controller="MainCtrl">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Weather Project</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="header-tron">
+        <h1>Weather CRUD<h2>
+        </div>
+
+        <form class="form-inline text-center">
+          <div class="form-group">
+            <label class="sr-only" for="exampleInputAmount">City, Zip, etc.</label>
+            <div class="input-group">
+              <div class="input-group-addon">Search</div>
+              <input type="text" class="form-control" placeholder="City, Zip, etc." ng-model="searchCode">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-danger" ng-click="searchParam(searchCode)"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        </form>
+        <br>
+
+
+        <div class="weather-data">
+          <div ng-show="weatherSearched" class="row well">
+
+            <div ng-show="weatherSearched" class="col-lg-4">
+              <h1 class="text-danger">{{myObject.name}}, {{myObject.state}}<br>{{myObject.sys.country}}</h1>
+            </div>
+
+            <div ng-show="weatherSearched" class="col-lg-2">
+              <h1>{{(weatherObj.temp-273.15)*9/5+32 | number:1}} F</h1>
+            </div>
+
+            <div ng-show="weatherSearched" class="col-lg-4">
+              <h1>{{myObject.weather[0].description}}</h1>
+            </div>
+
+            <div ng-show="weatherSearched" class="col-lg-2">
+              <button ng-click="writeToList(myObject)" class="btn-lg btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            </div>
+
+
+          </div>
+        </div>
+
+      <div ng-show="weatherList != 0" class="row">
+        <h1>My Cities</h1>
+      </div>
+
+
+      <div ng-repeat="city in weatherList track by $index">
+        <div class="row well">
+
+          <div class="col-lg-4">
+            <h1 class="text-danger">{{city.name}},{{city.state}}<br>{{city.sys.country}}</h1>
+          </div>
+
+          <div class="col-lg-2">
+            <h1>{{(city.main.temp-273.15)*9/5+32 | number:1}} F</h1>
+          </div>
+
+          <div class="col-lg-4">
+            <h1>{{city.weather[0].description}}</h1>
+          </div>
+
+          <div class="col-lg-2">
+            <button ng-click="deleteCity($index)" class="btn-lg btn-danger"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span></button>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  </body>
+</html>
