@@ -11,18 +11,6 @@ function main() {
       						"iOS - iTunes", "iOS - Spotify", "iOS - Apple Music", "iOS - Soundcloud"
     					  ]
 
-			platform = _.sortBy(platform,
-			                function (d) {
-                        	return 1*d.Percentage;
-
-			                });
-
-			service = _.sortBy(service,
-			                function (d) {
-                        	return 1*d.Percentage;
-
-			                });
-
 			// establishing width, height, and radius of the arc?
 			var w = 400,
 				h = 400,
