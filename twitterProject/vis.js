@@ -97,14 +97,6 @@ function main() {
 							   right: 50,
 							   bottom: 200 };
 
-				var xd = _.map(
-				   xdomain,
-				   function(value, key) {
-					  return { service: key,
-							   position: value };
-				   }
-				);
-
 
 				//Scaling ???
 				var realW = document.getElementById("barz").offsetWidth;
