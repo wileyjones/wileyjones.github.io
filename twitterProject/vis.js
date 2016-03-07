@@ -14,13 +14,13 @@ function main() {
 			platform = _.sortBy(platform,
 			                function (d) {
                         	return 1*d.Percentage;
-                       
+
 			                });
 
 			service = _.sortBy(service,
 			                function (d) {
                         	return 1*d.Percentage;
-                       
+
 			                });
 
 			// establishing width, height, and radius of the arc?
@@ -30,7 +30,7 @@ function main() {
 
 
 // ================================================= Platform Pie Chart =========================
-// ==============================================================================================				
+// ==============================================================================================
 // ==============================================================================================
 			var svg = d3.select("#platform")
 			            .append("svg")
@@ -44,7 +44,7 @@ function main() {
 
 			var pie = d3.layout.pie()
 						.value(function (d) {return d.Percentage; })
-						.sort(null); 
+						.sort(null);
 
 			var color = d3.scale.ordinal()
 			.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
@@ -67,10 +67,10 @@ function main() {
           		.on("mouseover", tip.show )
           		.on("mouseout", tip.hide )
           		;
-		   
+
 
 // ================================================= Streaming Service Pie Chart ===================
-// =================================================================================================				
+// =================================================================================================
 // =================================================================================================
           	var svg = d3.select("#service")
 			            .append("svg")
@@ -85,7 +85,7 @@ function main() {
 
 			var pie = d3.layout.pie()
 						.value(function (d) {return d.Percentage; })
-						.sort(null); 
+						.sort(null);
 
 			var color = d3.scale.ordinal()
 			.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
@@ -101,9 +101,9 @@ function main() {
           		;
 
 // ================================================= Bar Chart of Averages =========================
-// =================================================================================================				
 // =================================================================================================
-				
+// =================================================================================================
+
 				var margin = { top: 100,
 							   left: 50,
 							   right: 50,
@@ -116,11 +116,11 @@ function main() {
 							   position: value };
 				   }
 				);
-				
+
 
 				//Scaling ???
 				var realW = document.getElementById("barz").offsetWidth;
-				
+
 				var width = realW - margin.left - margin.right,
 					height = 800 - margin.top - margin.bottom;
 
@@ -137,8 +137,8 @@ function main() {
 				// we will use _.map() to map our array into a new array.
 				//
 				// Our range is all the values in [0, width].
-				
-						  
+
+
 				var svg =
 				d3.select("#barz")
 				  .append("svg")
@@ -154,7 +154,7 @@ function main() {
 				   d3.scale.ordinal()
 						   .domain( xdomain )
 						   .rangeBands( [0, width], 0.1 );
-						   
+
 				var y =
 				   d3.scale.linear()
 						   .domain( [0, d3.max( avg, function(d) { return d.Avg; } )] )
@@ -164,7 +164,7 @@ function main() {
 				   d3.svg.axis()
 						 .scale( x )
 						 .orient("bottom");
-				
+
 				var yAxis =
 					d3.svg.axis()
 						  .scale(y)
@@ -179,11 +179,11 @@ function main() {
 
 				svg.call(tip);
 
-				var c20 = d3.scale.category20();  
+				var c20 = d3.scale.category20();
 				svg.selectAll("rect")
 				  .data(avg)
 				  .enter()
-				  
+
 				  .append("rect")
 				  .attr("x", function (d, i) { return 5+d.Position/16*width; } )
 				  .attr("y", function (d, i) { return y(d.Avg); })
@@ -195,16 +195,16 @@ function main() {
 				  .on("mouseover", tip.show )
 				  .on("mouseout", tip.hide )
 				  ;
-				  
-				
+
+
 
 				svg.append("g")
 				  .attr("class", "axis")
 				  .call(yAxis)
 				  ;
 
-				
-				  
+
+
 				svg.append("g")
 				  .attr("class", "axis")
 				  .attr("transform", "translate(0, " + height + ")")

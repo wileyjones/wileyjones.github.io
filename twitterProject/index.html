@@ -1,8 +1,4 @@
-
-{% extends "templates/base.html" %}
-{% block content %}
-
-<div class="container">
+<head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
@@ -18,35 +14,37 @@
     <script>
         main();
     </script>
-    
-</div>
+</head>
 
-<div class="jumbotron">
-    <div class="container">
-        <h1><kbd>CS 205</kbd>: Final Project<br>Twitter API Case Study</h1>
-    </div>
-</div>
+<body>
 
-<div class="container">
-    <div class="row">
-        <h1>Platform and Service Usage Pie Charts</h1>
-            <div class="col-lg-6" id="platform">
-                <h2 class="well">% of total Tweets coming from different platforms</h2>
-             </div>
-            <div class="col-lg-6" id="service">
-                <h2 class="well">% of total Tweets with content specific to a streaming service</h2>
-             </div>
-    </div>
-</div>
+  <div class="jumbotron">
+      <div class="container">
+          <h1><kbd>CS 205</kbd>: Final Project<br>Twitter API Case Study</h1>
+      </div>
+  </div>
 
-<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <h1>Platform and Service Usage Pie Charts</h1>
+              <div class="col-lg-6" id="platform">
+                  <h2 class="well">% of total Tweets coming from different platforms</h2>
+               </div>
+              <div class="col-lg-6" id="service">
+                  <h2 class="well">% of total Tweets with content specific to a streaming service</h2>
+               </div>
+      </div>
+  </div>
 
-    <div class="container"><h1>Platform by Service Breakdown<h1></div>
+  <div class="jumbotron">
 
-</div>
+      <div class="container"><h1>Platform by Service Breakdown<h1></div>
+
+  </div>
 
     <div class="container" id="barz"></div>
 
+</body>
 
 <!-- STYLING ========================================================================================================= -->
 <style>
@@ -152,7 +150,4 @@ h2 {
   stroke-opacity: .6;
 }
 */
-<style>
-
-
-{% endblock %}
+</style>
