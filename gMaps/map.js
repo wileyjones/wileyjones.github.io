@@ -1,14 +1,13 @@
-
-
-
-
 //Angular App Module and Controller
 var mapApp = angular.module('mapApp', []);
-mapApp.controller('MapController', function ($scope) {
+mapApp.controller('MapController', function ($scope, $http) {
 
-  $.getJSON("people.json", function (jsonData) {
+  var people = [];
 
-    var people = jsonData; }).fail(function (d) { alert("Failed to load JSON!"); });
+  $http.get("people.json").then( function(res) {
+    for (var i = 0; i < res.data.length; i++) {
+      people.push(res.data[i]); };
+  });
 
     var mapOptions = {
         zoom: 16,
