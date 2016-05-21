@@ -4,8 +4,8 @@ mapApp.controller('MapController', function ($scope, $http) {
 
 
   $http.get("people.json").then( function(res) {
+    var people = [];
     for (var i = 0; i < res.data.length; i++) {
-      var people = [];
       people.push(res.data[i]); };
       $scope.people = people;
 
