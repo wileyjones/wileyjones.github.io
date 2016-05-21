@@ -2,13 +2,12 @@
 var mapApp = angular.module('mapApp', []);
 mapApp.controller('MapController', function ($scope, $http) {
 
-  var people = [];
-  $scope.people = people;
 
   $http.get("people.json").then( function(res) {
     for (var i = 0; i < res.data.length; i++) {
-      $scope.people.push(res.data[i]); };
-  });
+      var people = [];
+      people.push(res.data[i]); };
+      $scope.people = people;
 
     var mapOptions = {
         zoom: 16,
@@ -55,5 +54,8 @@ mapApp.controller('MapController', function ($scope, $http) {
         e.preventDefault();
         google.maps.event.trigger(selectedMarker, 'click');
     }
+    
+          
+  });
 
 });
