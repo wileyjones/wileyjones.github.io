@@ -1,0 +1,26 @@
+[
+  {
+    "name" : "Wiley Jones",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "EE",
+    "grad" : 2017,
+    "work": "PwC Technology Consulting Intern",
+    "url": "https://www.linkedin.com/in/wileycwjones",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVQAAAAJGRhMjAxZTc2LTgyNWItNDY4My1hNjNlLTZjYzI5ZGU4ZjViNA.jpg",
+    "lat" : 40.111097,
+    "long" : -88.225137
+    },
+  {
+    "name" : "SWiley Jones",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "EE",
+    "grad" : 2017,
+    "work": "PwC Technology Consulting Intern",
+    "url": "https://www.linkedin.com/in/wileycwjones",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVQAAAAJGRhMjAxZTc2LTgyNWItNDY4My1hNjNlLTZjYzI5ZGU4ZjViNA.jpg",
+    "lat" : 40.111097,
+    "long" : -88.225137
+    },
+];
