@@ -10,7 +10,7 @@ mapApp.controller('MapController', function ($scope, $http) {
       $scope.people = people;
 
     var mapOptions = {
-        zoom: 16,
+        zoom: 4,
         center: new google.maps.LatLng(40.111097,-88.225137),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
