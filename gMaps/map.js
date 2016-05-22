@@ -34,7 +34,7 @@ mapApp.controller('MapController', function ($scope, $http) {
 
 
         });
-        marker.content = '<div class="infoWindowContent"> <img src="'+ info.photo +'" class="img-circle"><br/>' + marker.desc + '<br />' + info.work +'<br /><br /><a href="'+ info.url +'"class="btn btn-info"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a></div>';
+        marker.content = '<div class="infoWindowContent">' + marker.desc + '<br />' + info.work +'<br /><br /><a href="'+ info.url +'"class="btn btn-info"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a></div>';
 
         google.maps.event.addListener(marker, 'click', function(){
             infoWindow.setContent('<h2>' + marker.title + '</h2>' +
