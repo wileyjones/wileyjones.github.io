@@ -35,8 +35,7 @@ mapApp.controller('MapController', function ($scope, $http) {
         marker.content = '<div class="infoWindowContent"> ' +
                           info.level + ' ' + info.major + ', ' + info.minor + 'Class of ' + info.grad +
                           '<br />' + info.work +
-                          '<br /><br /><a href="'+ info.url +'"class="btn btn-info"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                          </div>';
+                          '<br /><br /><a href="'+ info.url +'"class="btn btn-info"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a></div>';
 
         google.maps.event.addListener(marker, 'click', function(){
             infoWindow.setContent('<h2>' + marker.title + '</h2>' +
