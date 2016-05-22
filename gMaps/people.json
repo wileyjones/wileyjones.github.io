@@ -5,10 +5,71 @@
     "major" : "ME",
     "minor" : "EE",
     "grad" : 2017,
-    "work": "PwC Technology Consulting Intern",
+    "work": "PwC",
     "url": "https://www.linkedin.com/in/wileycwjones",
     "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVQAAAAJGRhMjAxZTc2LTgyNWItNDY4My1hNjNlLTZjYzI5ZGU4ZjViNA.jpg",
     "lat" : 37.327258,
     "long" : -121.888969
+    },
+  {
+    "name" : "James B",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "",
+    "grad" : 2016,
+    "work": "",
+    "url": "",
+    "photo": "",
+    "lat" : 41.878114,
+    "long" : -87.629798
+    },
+  {
+    "name" : "Brandon Kwiatkowski",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "",
+    "grad" : 2017,
+    "work": "Electi Flex Co",
+    "url": "",
+    "photo": "",
+    "lat" : 41.98332,
+    "long" : -88.085869
+
+    },
+  {
+    "name" : "Sarah Coady",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "",
+    "grad" : 2013,
+    "work": "",
+    "url": "",
+    "photo": "",
+    "lat" : 41.388599,
+    "long" : -88.269092
+    },
+  {
+    "name" : "Sanjit Dutta",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "CS",
+    "grad" : 2016,
+    "work": "PwC",
+    "url": "https://www.linkedin.com/in/sanjit-dutta-09376484",
+    "photo": "",
+    "lat" : 40.752652,
+    "long" : -73.980075
+    },
+  {
+    "name" : "Matt Schroeder ",
+    "level" : "B.S.",
+    "major" : "ME",
+    "minor" : "T&M",
+    "grad" : 2017,
+    "work": "Apple",
+    "url": "https://www.linkedin.com/in/mtschrd2",
+    "photo": "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAVQAAAAJGRhMjAxZTc2LTgyNWItNDY4My1hNjNlLTZjYzI5ZGU4ZjViNA.jpg",
+    "lat" : 37.331571,
+    "long" : -121.905183
     }
 ]
