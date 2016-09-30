@@ -1,14 +1,14 @@
-% Script for Plotting the Phase Portrait Semi-Stable System
+% Script plotting phase portraits of non-linear bifurcations [Fig1]
 
 % init system and states
 number = 1;
 for a_range = -3:0.1:3
-    
+
     g = 9.81;
     L = 1;
     a = a_range;
     b = 0.1;
-    ss = @(t,Z) [Z(2)+Z(1)*(a-Z(1)^2-Z(2)^2); -Z(1)+Z(2)*(1-Z(1)^2-Z(2)^2)];
+    ss = @(t,Z) [Z(2)+Z(1)*(a-Z(1)^2-Z(2)^2); -Z(1)+Z(2)*(a-Z(1)^2-Z(2)^2)];
     Z1 = linspace(-pi,pi,25);
     Z2 = linspace(-pi,pi,25);
 
@@ -42,8 +42,8 @@ for a_range = -3:0.1:3
     hold on
 
     for x_range = [-1,0,1]
-        for THETA_sol = -10:1:10
-            [ts,ys] = ode45(ss,[0,10],[x_range;THETA_sol]);
+        for Z_sol = -10:1:10
+            [ts,ys] = ode45(ss,[0,10],[x_range;Z_sol]);
             plot(ys(:,1),ys(:,2),'b');
             %plot(-ys(:,1),ys(:,2),'b')
             %plot(ys(1,1),ys(1,2),'bo') %start of contour
@@ -53,13 +53,13 @@ for a_range = -3:0.1:3
 
     axis([-2 2 -2 2])
     grid on
-    
+
     s1 = 'figure_';
     s2 = num2str(number);
     s3 = '.jpg';
     filo = strcat(s1,s2,s3);
     number = number+1;
-    
+
     doc saveas
     saveas(gcf,filo);
 
