@@ -17,6 +17,13 @@ body {
 
 }
 
+/* Setting Code Block to Scroll */
+pre {
+  overflow: auto;
+  word-wrap: normal;
+  white-space: pre;
+}
+
 #gif-embed img {
     display: block;
     margin: auto;
