@@ -46,8 +46,8 @@
               <p class="text-muted">
                 When investigating a given system's trajectories and dynamics it
                 is often not intuitive how the system generally behaves. Even after
-                solving the state space and finding the eigenvalues eigenvectors that
-                given information about the stability, it is still hard to visualize what
+                solving the state space and finding the eigenvalues and eigenvectors that
+                give information about the stability, it is still hard to visualize what
                 is occurring for a given set of trajectories.<br><br>
 
                 In the special case of second-order systems, a phase portrait is particularly
@@ -56,7 +56,7 @@
                 case of nonlinear systems, phase portraits are particularly useful
                 because they do no require any linearization or elimination of nonlinear terms.
                 The phase portraits is able to perfectly capture all of the nonlinear trajectories
-                and display them in a way that would be otherwise difficult to discern.<br><br>
+                and display them in a way that would be otherwise difficult.<br><br>
 
                 The simple pendulum is a great example of a second-order nonlinear system that can
                 be easily visualized by the phase portrait. The simple pendulum is often linearized using
@@ -64,19 +64,20 @@
                 <code>A</code> is a matrix of scalars. Instead, the phase portrait method
                 leaves the simple pendulum state space in its nonlinear form as <code>sin(θ)</code>.<br><br>
 
-                It is worth that the inherent limitation of phase portraits is that they only
+                It is worth noting that the inherent limitation of phase portraits is that they only
                 applicable in second-order or lower systems. However, it cannot be asserted
                 enough how effective phase portraits are at giving quick analysis for even
-                the most highly-nonlinear systems.<br><br>
+                highly-nonlinear systems.<br><br>
 
                 The code below provide phase portraits for various dampened and undampened
                 simple pendulum scenarios. Notice how the dampened trajectories converge
-                to a point while the undampened form concentric contours, formally known as
+                to a point while the undampened ones form concentric contours, formally known as
                 <a target="_blank" href="https://en.wikipedia.org/wiki/Limit_cycle">limit cycles</a>.
-                Also notice how for the different dampening coefficients, the trajectories converge to a point
+                Also, notice how for the larger dampening coefficient, the trajectories converge to a point
                 much quicker, with fewer rotations around. This reflects our intution that a
-                pendulum with more friction will come to rest faster. Similarly, the limit cylces formed
-                in the undampened figures show that wihtout any friction, the pendulum will continue
+                pendulum with more friction (a larger dampening coefficient) will come to rest faster.
+                Similarly, the limit cylces formed
+                in the undampened figures show that without any friction, the pendulum will continue
                 to swing around the equilibrium point forever. It is clear why phase portraits
                 are a powerful tool for analyzing nonlinear systems, read more about
                 them <a target="_blank" href="https://en.wikipedia.org/wiki/Phase_portrait">here</a>.
