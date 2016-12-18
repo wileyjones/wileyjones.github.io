@@ -5,10 +5,10 @@ function main() {
 			var platform = jsonData[0];
 			var service = jsonData[1];
 			var avg = jsonData[2];
-			var xdomain = ["Twitter Website - iTunes", "Twitter Website - Spotify", "Twitter Website - Apple Music", "Twitter Website - Soundcloud",
-      						"Android - iTunes", "Android - Spotify", "Android - Apple Music", "Android - Soundcloud",
-      						"Other - iTunes", "Other - Spotify", "Other - Apple Music", "Other - Soundcloud",
-      						"iOS - iTunes", "iOS - Spotify", "iOS - Apple Music", "iOS - Soundcloud"
+			var xdomain = ["Twitter Website", "Android", "Other", "iOS",
+				       "Twitter Website", "Android", "Other", "iOS",
+				       "Twitter Website", "Android", "Other", "iOS",
+				       "Twitter Website", "Android", "Other", "iOS"
     					  ]
 
 			// establishing width, height, and radius of the arc?
