@@ -14,25 +14,25 @@
     [
         
         
-            {"Service": "iTunes-Twitter Website", "Avg": 14.83,"StdDev": 2.67, "Position": 0, "Color": "#3498db"},
-            {"Service": "iTunes-Android" , "Avg": 18.43,"StdDev": 4.26, "Position": 1, "Color": "#3498db"},
-            {"Service": "iTunes-Other","Avg": 41.61,"StdDev": 6.36, "Position": 2, "Color": "#3498db"},
-            {"Service":"iTunes-iOS","Avg": 23.05,"StdDev": 5.25, "Position": 3, "Color": "#3498db"}
+            {"Service": "Twitter Website", "Avg": 14.83,"StdDev": 2.67, "Position": 0, "Color": "#3498db"},
+            {"Service": "Android" , "Avg": 18.43,"StdDev": 4.26, "Position": 1, "Color": "#3498db"},
+            {"Service": "Other","Avg": 41.61,"StdDev": 6.36, "Position": 2, "Color": "#3498db"},
+            {"Service":"iOS","Avg": 23.05,"StdDev": 5.25, "Position": 3, "Color": "#3498db"}
         , 
-            {"Service": "Spotify-Twitter Website", "Avg": 17.8,"StdDev": 6.22, "Position": 4, "Color": "#39d179" },
-            {"Service": "Spotify-Android" , "Avg": 26.11,"StdDev": 14.27, "Position": 5, "Color": "#39d179" },
-            {"Service": "Spotify-Other","Avg": 11.36,"StdDev": 3.26, "Position": 6, "Color": "#39d179"},
-            {"Service":"Spotify-iOS","Avg": 15.81,"StdDev": 9.35, "Position": 7, "Color": "#39d179"}
+            {"Service": "Twitter Website", "Avg": 17.8,"StdDev": 6.22, "Position": 4, "Color": "#39d179" },
+            {"Service": "Android" , "Avg": 26.11,"StdDev": 14.27, "Position": 5, "Color": "#39d179" },
+            {"Service": "Other","Avg": 11.36,"StdDev": 3.26, "Position": 6, "Color": "#39d179"},
+            {"Service":"iOS","Avg": 15.81,"StdDev": 9.35, "Position": 7, "Color": "#39d179"}
         , 
-            {"Service": "Apple-Twitter Website", "Avg": 0.65,"StdDev": 0.34, "Position": 8, "Color": "#e74c3c" }, 
-            {"Service": "Apple Music-Android" , "Avg": 1.05,"StdDev": 0.99, "Position": 9, "Color": "#e74c3c" },
-            {"Service": "Apple Music-Other", "Avg": 2.24,"StdDev": 1.63, "Position": 10, "Color": "#e74c3c" },
-            {"Service":"Apple Music-iOS","Avg": 1.56,"StdDev": 0.5, "Position": 11, "Color": "#e74c3c" }
+            {"Service": "Twitter Website", "Avg": 0.65,"StdDev": 0.34, "Position": 8, "Color": "#e74c3c" }, 
+            {"Service": "Android" , "Avg": 1.05,"StdDev": 0.99, "Position": 9, "Color": "#e74c3c" },
+            {"Service": "Other", "Avg": 2.24,"StdDev": 1.63, "Position": 10, "Color": "#e74c3c" },
+            {"Service":"iOS","Avg": 1.56,"StdDev": 0.5, "Position": 11, "Color": "#e74c3c" }
         , 
-            {"Service": "Soundcloud-Twitter Website", "Avg": 66.72,"StdDev": 6.58, "Position": 12, "Color": "#e67e22"},
-            {"Service": "Soundcloud-Android" , "Avg": 54.32,"StdDev": 11.88, "Position": 13, "Color": "#e67e22"},
-            {"Service": "Soundcloud-Other", "Avg": 44.83,"StdDev": 5.23, "Position": 14, "Color": "# e67e22"}, 
-            {"Service":"Soundcloud-iOS","Avg": 59.58,"StdDev": 8.77, "Position": 15, "Color": "#e67e22"}
+            {"Service": "Twitter Website", "Avg": 66.72,"StdDev": 6.58, "Position": 12, "Color": "#e67e22"},
+            {"Service": "Android" , "Avg": 54.32,"StdDev": 11.88, "Position": 13, "Color": "#e67e22"},
+            {"Service": "Other", "Avg": 44.83,"StdDev": 5.23, "Position": 14, "Color": "#e67e22"}, 
+            {"Service":"iOS","Avg": 59.58,"StdDev": 8.77, "Position": 15, "Color": "#e67e22"}
     ]
    
 ]
