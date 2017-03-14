@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Personal website and portfolio of Wiley Jones. Follow me on Twitter @wileycwj !">
+    <meta name="author" content="Wiley Jones">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>wileyjones.com</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="portfolio-397_2.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/4feeafbd3c.js"></script>
+
+    <!-- GoogleAnalytics -->
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65621725-1', 'auto');
+          ga('send', 'pageview');
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="project text-center">
+      <h1>Lyapunov Theory [ DRAFT ]</h1>
+      <p>Needs Latex equations, code, figs</p>
+    </div>
+
+      <div class="jumbotron center">
+
+          <div class="project">
+            <div class="row">
+              <p class="text-muted">
+
+                In physics, conservation laws state that no energy can be created or destroyedbut simply changed into one form or another, converted yet conserved. A Russianmathematician from the 19th century named Aleksandr Lyapunov applied thisfundamental principle to develop a major pillar of nonlinear control theory.<br><br>The philosophy is that when observing the total energy of a system continuallydissipating it will settle to an equilibrium if the system is lower bounded.Imagine a pendulum swinging back and forth with some small friction around thehinge. Intuitively, we know the friction will reduce the kinetic and potentialenergy until they both settle to a resting value, and the pendulum will sit atthe bottom of its arc. In this case, the pendulum system is lower bounded by thelowest total energy it can physically obtain due to gravity.<br><br>Lyapunov formalized this intuitive physical understanding into Lyapunov’s DirectMethod, which contains two major concepts in Lyapnouv Stability and LyapunovFunctions.<br><br>Lyapunov Functions are essentially scalar energy functions taking the form V(x)where it is positive definite and its derivative is negative semi-definite. Theyare often derived from the physical attributes of the system and serve only as a“candidate” until proven sufficient. More on that to come. Example of nonlinearMSD candidate Lyapunov function.<br><br>Lyapunov Stability is present if the Lyapunov Function V(x) satisfies thecriteria:<br><br>While this mathematical jargon is a confusing, it is not actually the mostgeneral solution. Lyapunov’s original work is a narrow approach and someextension is required for more thorough generality. Using invariant set theoremswe can best frame the object of Lyapunov’s work and then use the twointerchangeably.</p><div class="row">  <div class="col-lg-6">    <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/IMG_2844.JPG"></div>  </div>  <div class="col-lg-6">    <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/IMG_2845.JPG"></div>  </div></div><p class="text-muted">BR is supposed to represent an arbitrarily large dimensionalvolume that exists within a space of the same or greater dimension . Multipleand geometrically different  volumes can exist within space of . If the union ofthese volumes comprehensively coverages all of , then  is described as “global”.Otherwise, it and the other volumes are described as “local”.<br><br>Now imagine a point moving within our volume  . If for all possible trajectoriesof that point for all of time t, it stays within that volume. Additionally,let’s imagine that the velocity of the point is slowing down for all of time t.Intuition would tell us that it will eventually (asymptotically) come to rest atsome location within . This is essentially the notion of stability, asformalized by Lyapunov, framed from the perspective of invariant sets.<br><br>V(x) actually represents the “energy” of the system in question. When thissystem’s energy is lower-bounded, meaning it has some volume  that contains it,we can consider the rate of change of energy. If this rate of change of energy, Vdot(x)is strictly negative for all time t then the  will clearly approach itslower-bound. In the case where Vdot(x)=0, the system will enter a limit cycle asdescribed in a previous post.<br><br>Analytically, the power of this extension of Lyapunov’s formalism for stabilityis evident. In order to find the stability of a system, candidate Lyapunovfunctions can be proposed until they fit the stability criteria previouslydescribed. Of course there is a drawback to the method, which is the fact thatit is a sufficiency theorem. Stability can only be proved by a candidateupholding the stability criteria, while failure to do so is inconclusive.              </p>
+            </div>
+          </div>
+
+          <!--<div class="col-lg-8">
+            <p id="social" class="text-muted">Interested in frontier technologies with an affinity for the intersection of artifical intelligence and robotics. Currently I'm working in consulting and venture capital.
+            <br><br>Feel free to reach out to me by <a target="_blank" href="mailto:wjones700@gmail.com">email</a> if you'd like to chat.</p>
+          </div>
+          <div class="col-lg-4">
+            <img src='bio.jpg' class="img-rounded center">
+            <a target="_blank" href="http://wileyjones.com/listfolio">
+          </div>
+        </div>-->
+        <div> <!-- addding in code -->
+          <pre><code>
+
+          </code></pre>
+        </div>
+
+
+        <!--<div class="projects">
+            <div class="container well project">
+              <div class="project text-center">
+                <p><a href="http://wileyjones.com/twitterProject/index">Phase Portraits of Harmonic Pendulum</a></p>
+              </div>
+              <div class="project text-center">
+                <p><a href="http://wileyjones.com/weatherApp/index">Weather API Project</a></p>
+              </div>
+              <div class="project text-center">
+                <p><a href="http://wileyjones.com/gMaps/google-maps">MechSe Student Map</a></p>
+              </div>
+            </div>
+        </div>-->
+
+
+      </div>
+
+
+      <footer class="footer text-center">
+        <p>&copy; 2016 Wiley Jones</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
