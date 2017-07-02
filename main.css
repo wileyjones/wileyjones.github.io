@@ -7,6 +7,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top;
+  font-family: 'Lekton', sans-serif;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -20,12 +22,16 @@ body {
 /* Custom page header */
 .header {
   padding-bottom: 5px;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 0px solid #e5e5e5;
 }
 
 h1 {
   color: #2c3e50;
   font-weight: bold;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -43,6 +49,7 @@ h1 {
 
 nav {
   background-color: white;
+  border-bottom: 0px;
 }
 
 #social a {
