@@ -341,8 +341,8 @@ var w = document.body.clientWidth,
     colors = pv.Colors.category19();
 
 var vis = new pv.Panel()
-    .width(700)
-    .height(400)
+    .width(w/4)
+    .height(h/1.25)
     .fillStyle("clear")
     .event("mousedown", pv.Behavior.pan())
     .event("mousewheel", pv.Behavior.zoom());
@@ -363,7 +363,7 @@ force.node.add(pv.Dot)
     .strokeStyle("#2ecc71")
     .lineWidth(1)
     .title(function(d) {d.nodeName})
-    .event("mousedown", pv.Behavior.drag())
-    .event("drag", force);
+    //.event("mousedown", pv.Behavior.drag())
+    //.event("drag", force);
 
 vis.render();
