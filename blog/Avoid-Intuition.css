@@ -105,12 +105,15 @@ nav {
   border-bottom: 1px solid #e5e5e5;
   padding: 40px 40px 40px 40px;
   margin-bottom: 10px;
-  max-width: 1200px;
+  max-width: 900px;
   background-color: white;
   margin: auto;
   width: 90%;
   }
 
+.jumbotron p {
+  font-size: 16px;
+}
 
 }
 /* CSS Shadowing */

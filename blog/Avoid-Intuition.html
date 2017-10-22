@@ -50,10 +50,10 @@
 Understanding your assumptions and thoroughly questioning them is crucial to
 building complex systems. I’ve found that the vast majority of mistakes I make
 in hardware are where I let my intuition develop an argument for why something
-is occurring. Intuition easily justifies that bad assumptions that thrive in our
+is occurring. Intuition easily justifies the bad assumptions that thrive in our
 knowledge gaps.<br><br>
 
-A few months back a teammate and I ran into a bug where a sensor (<a href="http://www.rohm.com/web/in/faq_search/-/faq_search/FaqId/279" class="blue">IR
+A few months back a teammate and I ran into a bug where a sensor (<a target="_blank "href="http://www.rohm.com/web/in/faq_search/-/faq_search/FaqId/279" class="blue">IR
 photointerrupter</a>) was counting way too many times when it was triggered. It was
 a particularly weird bug because we had another set of these already implemented
 and they didn’t have this problem. We started looking into the code to see if it
@@ -70,13 +70,13 @@ was issue with how we were counting the <a target="_blank" href="https://unix.st
 After some careful examination of the software, we started looking at the
 physical hardware. The physical hardware seemed fine. The voltages were exactly
 as expected when the sensor was blocked and unblocked. I hooked up the outputs
-to <a target="_blank" href="https://en.wikipedia.org/wiki/https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwiq3fTBiYTXAhUCwFQKHValDs0QjRwIBw&url=http%3A%2F%2Fwww.bitscope.com%2Fsoftware%2Flogic%2F&psig=AOvVaw0HRmLe-S-6Ddwxs20wBDwh&ust=1508756332338446">digital logic analyzer</a> and blocked and unblocked the sensor. Sure enough,
+to a <a target="_blank" href="http://www.radio-electronics.com/info/t_and_m/logic_analyzer/logic_analyzer.php">digital logic analyzer</a> and blocked and unblocked the sensor. Sure enough,
 leading up to the actual pulse were lots of tiny pulses increasing in duty
 cycle. There were also tiny pulses trailing the actual pulse, decreasing in duty
 cycle. We went and checked our correctly functioning implementation and
 surprisingly the small leading and trailing pulses were there too! But for some
 reason they were being counted properly by the <a target="_blank" href="https://en.wikipedia.org/wiki/Microcontroller">MCU</a>. We were confused.
-So we attached analog leads to the output of our sensor blocking and unblocking
+So we attached analog leads to the output of our sensor. We blocked and unblocked
 it, expecting to see the false pulse train leading up to the actual pulse. Nope.
 Perfectly clean rising and falling edges on each of the implementations, exactly
 the same way. We were very confused.<br><br>
@@ -122,6 +122,7 @@ and it can usually be resolved by low-pass filtration in hardware right before
 the signal enters the MCU.<br><br>
 
 <div class="img-responsive text-center" id=gif-embed>
+<p class="text-muted ">Schmitt Trigger Edge Detection</p>
 <img class="text-center" src="http://howtomechatronics.com/wp-content/uploads/2015/08/Non-Symmetrical-Schmitt-Trigger.png">
 </div><br><br>
 
@@ -136,6 +137,7 @@ that the sensors had all the extra triggers because the end result always
 appeared correct.<br><br>
 
 <div class="img-responsive text-center" id=gif-embed>
+  <p class="text-muted ">Quadrature Encoder Waveforms</p>
 <img class="text-center" src="http://www.robotoid.com/appnotes/images/quad-encoding-waveform.png">
 </div><br><br>
 
@@ -146,7 +148,7 @@ explanations could be presented but would conflict one another. Keep an eye out
 for these type of inconsistencies, as they’re a strong indicator of bad of
 assumptions.
 
-<br><br><p><a class="blue">— </a>10.22.2017<br><br></p>
+<br><br><p class="text-muted"><a class="blue">— </a>10.22.2017<br><br></p>
 
       </div>
 
