@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Personal website and portfolio of Wiley Jones. Follow me on Twitter @wileycwj !">
+    <meta name="author" content="Wiley Jones">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+
+    <title>Avoid your intuition, it’s probably wrong</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="Avoid-Intuition.css" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <script src="https://use.fontawesome.com/4feeafbd3c.js"></script>
+
+    <!-- GoogleAnalytics -->
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-65621725-1', 'auto');
+          ga('send', 'pageview');
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <div class="project text-center line">
+      <h1 class="blue">I avoid my intuition, it’s usually wrong</h1>
+    </div>
+
+    <hr>
+
+      <div class="jumbotron center">
+
+          <div class="project">
+            <div class="row">
+              <p class="text">
+
+Understanding your assumptions and thoroughly questioning them is crucial to
+building complex systems. I’ve found that the vast majority of mistakes I make
+in hardware are where I let my intuition develop an argument for why something
+is occurring. Intuition easily justifies the bad assumptions that thrive in our
+knowledge gaps.<br><br>
+
+A few months back a teammate and I ran into a bug where a sensor (<a target="_blank "href="http://www.rohm.com/web/in/faq_search/-/faq_search/FaqId/279" class="blue">IR
+photointerrupter</a>) was counting way too many times when it was triggered. It was
+a particularly weird bug because we had another set of these already implemented
+and they didn’t have this problem. We started looking into the code to see if it
+was issue with how we were counting the <a target="_blank" href="https://unix.stackexchange.com/questions/17998/what-are-software-and-hardware-interrupts-and-how-are-they-processed">interrupts</a>.<br><br>
+
+  </p>
+
+<div class="img-responsive text-center" id=gif-embed>
+<img class="text-center" src="http://rohmfs.rohm.com/en/products/images/faq/opto/optical_sensor/common/faq_01.gif">
+</div><br><br>
+
+<p class="text">
+
+After some careful examination of the software, we started looking at the
+physical hardware. The physical hardware seemed fine. The voltages were exactly
+as expected when the sensor was blocked and unblocked. I hooked up the outputs
+to a <a target="_blank" href="http://www.radio-electronics.com/info/t_and_m/logic_analyzer/logic_analyzer.php">digital logic analyzer</a> and blocked and unblocked the sensor. Sure enough,
+leading up to the actual pulse were lots of tiny pulses increasing in duty
+cycle. There were also tiny pulses trailing the actual pulse, decreasing in duty
+cycle. We went and checked our correctly functioning implementation and
+surprisingly the small leading and trailing pulses were there too! But for some
+reason they were being counted properly by the <a target="_blank" href="https://en.wikipedia.org/wiki/Microcontroller">MCU</a>. We were confused.
+So we attached analog leads to the output of our sensor. We blocked and unblocked
+it, expecting to see the false pulse train leading up to the actual pulse. Nope.
+Perfectly clean rising and falling edges on each of the implementations, exactly
+the same way. We were very confused.<br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+<img class="text-center" src="http://www.hho4free.com/images/duty_cycle.png">
+</div><br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+<img class="text-center" src="assets\fig1.PNG">
+</div><br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+<img class="text-center" src="assets\fig2.PNG">
+</div><br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+<img class="text-center" src="assets\fig3.PNG">
+</div><br><br>
+
+<p class="text">
+
+This is painful to recount because the solution now appears so
+obvious in hindsight. We had evidence suggesting that our MCU was performing some strange
+counting of the rising and falling edges of our actual pulse. It was right in
+front of us. We had data showing that the duty cycle of the false triggers were
+increasing as the it came closer to the actual pulse. What were we missing?<br><br>
+
+We had made a major assumption that analog-to-digital conversion on the logic
+analyzer would be able to get a clean reading of the sensor output being pulled
+high and low. We assumed that the measurement tool we were using wouldn’t also
+be having false triggers. We were really thrown off the trail because we had
+another implementation of the same sensors functioning properly. All of this
+combined, we let our intuition grasp for answers rather than consider the facts.<br><br>
+
+<a class="blue">—</a><br><br>
+
+After a bit of discussion, some forum reading, and more analysis of the signals
+we figured out the problem. The <a target="_blank" href="http://howtomechatronics.com/how-it-works/electrical-engineering/schmitt-trigger/">Schmitt Trigger</a> implemented on both our logic
+analyzer and on our MCU were getting triggered by the rising and falling edges
+of the sensor being blocked and unblocked. This is a pretty common occurrence
+and it can usually be resolved by low-pass filtration in hardware right before
+the signal enters the MCU.<br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+<p class="text-muted ">Schmitt Trigger Edge Detection</p>
+<img class="text-center" src="http://howtomechatronics.com/wp-content/uploads/2015/08/Non-Symmetrical-Schmitt-Trigger.png">
+</div><br><br>
+
+<p class="text">
+
+The reason the count on the other implementation appeared correct was because we were performing <a target="_blank" href="http://www.robotoid.com/appnotes/circuits-quad-encoding.html">quadrature
+encoding</a> with the sensors and we would increment in one direction and decrement
+in the other direction. The false pulses one on sensor offset the false pulses
+on the other since these were being used in conjunction. This is a little
+technical and very specific to our application but it basically masked the fact
+that the sensors had all the extra triggers because the end result always
+appeared correct.<br><br>
+
+<div class="img-responsive text-center" id=gif-embed>
+  <p class="text-muted ">Quadrature Encoder Waveforms</p>
+<img class="text-center" src="http://www.robotoid.com/appnotes/images/quad-encoding-waveform.png">
+</div><br><br>
+
+<p class="text">
+
+We were really confused by all the evidence presented to us simply because of the assumptions we were making. Multiple logical
+explanations could be presented but would conflict one another. Keep an eye out
+for these type of inconsistencies, as they’re a strong indicator of bad of
+assumptions.
+
+<br><br><p class="text-muted"><a class="blue">— </a>10.22.2017<br><br></p>
+
+      </div>
+
+      <hr>
+
+      <div class="container row">
+          <nav id="social">
+            <ul class="nav nav-pills pull-right">
+              <li role="presentation" ><a target="_blank" href="https://twitter.com/wileycwj"><i class="fa fa-twitter"></i></a></li>
+              <li role="presentation" ><a target="_blank" href="https://github.com/wileyjones"><i class="fa fa-github"></i></a></li>
+              <li role="presentation" ><a target="_blank" href="https://medium.com/@wcwj"><i class="fa fa-medium"></i></a></li>
+              <li role="presentation" ><a target="_blank" href="https://www.linkedin.com/in/wileycwjones"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </nav>
+          <p><a href="http://wileyjones.com" class="green vertical-align">home</a></p>
+        </div>
+
+
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
