@@ -1,140 +1,36 @@
-/* wileyjones.com — one stylesheet, no frameworks. */
-
-:root {
-  --text: #1a1a1a;
-  --muted: #555;
-  --link: #0b5fa5;
-  --rule: #ddd;
-  --bg: #fff;
-}
-
-html {
-  font-size: 17px;
-}
+/* wileyjones.com — browser defaults, lightly constrained. */
 
 body {
-  margin: 0 auto;
-  padding: 2.5rem 1.25rem 4rem;
-  max-width: 40rem;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", Times, serif;
-  line-height: 1.6;
-}
-
-h1, h2, h3 {
-  font-weight: normal;
-  line-height: 1.25;
-  margin: 2rem 0 0.75rem;
-}
-
-h1 {
-  font-size: 1.6rem;
-  margin-top: 0;
-}
-
-h2 {
-  font-size: 1.2rem;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 0.25rem;
-}
-
-h3 {
-  font-size: 1.05rem;
-}
-
-p {
-  margin: 0 0 1rem;
-}
-
-a {
-  color: var(--link);
-}
-
-a:visited {
-  color: var(--link);
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--rule);
-  margin: 2rem 0;
-}
-
-ul {
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 0.35rem;
-}
-
-small, .muted {
-  color: var(--muted);
-}
-
-blockquote {
-  margin: 0 0 1rem;
-  padding-left: 1rem;
-  border-left: 3px solid var(--rule);
-  color: var(--muted);
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 44em;
 }
 
 img {
-  display: block;
   max-width: 100%;
   height: auto;
-  margin: 1.5rem auto;
-}
-
-figure {
-  margin: 1.5rem 0;
-}
-
-figcaption {
-  color: var(--muted);
-  font-size: 0.9rem;
-  text-align: center;
 }
 
 pre {
   overflow-x: auto;
-  padding: 1rem;
-  background: #f6f6f6;
-  border: 1px solid var(--rule);
+  white-space: pre;
 }
 
-code, pre {
-  font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
-  font-size: 0.85rem;
-}
-
-nav.site {
-  margin-bottom: 2rem;
-  font-size: 0.95rem;
-}
-
-nav.site a {
-  margin-right: 1rem;
+hr {
+  margin: 2em 0;
 }
 
 footer {
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--rule);
-  font-size: 0.9rem;
-  color: var(--muted);
+  margin-top: 2em;
 }
 
-footer a {
-  margin-right: 1rem;
+footer a,
+nav a {
+  margin-right: 1em;
 }
 
-.byline {
-  color: var(--muted);
-  margin-top: -0.5rem;
-}
-
-.links li {
-  margin-bottom: 0.6rem;
+.banner {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
 }
