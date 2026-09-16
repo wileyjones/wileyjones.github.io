@@ -27,7 +27,15 @@ h2 + * {
 }
 
 .cv-dates {
+  display: grid;
+  grid-template-columns: auto 4ch 2ch 4ch auto;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
   white-space: nowrap;
+}
+
+.cv-dates > span {
+  text-align: right;
 }
 
 img {
