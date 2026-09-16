@@ -1,0 +1,81 @@
+/* wileyjones.com — browser defaults, lightly constrained. */
+
+body {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  max-width: 44em;
+  font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.125em;
+  margin: 1.5em 0 0.25em;
+}
+
+h2 + * {
+  margin-top: 0;
+}
+
+.writing > li + li {
+  margin-top: 0.75em;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1em;
+  align-items: baseline;
+}
+
+.cv-dates {
+  display: grid;
+  grid-template-columns: auto 4ch 2ch 4ch auto;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.cv-dates > span {
+  text-align: right;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+small,
+pre,
+code {
+  font-size: inherit;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+}
+
+hr {
+  margin: 2em 0;
+}
+
+footer {
+  margin-top: 2em;
+}
+
+footer a,
+nav a {
+  margin-right: 1em;
+}
+
+.banner {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5em;
+}
+
+.inline-icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
