@@ -6,6 +6,15 @@ body {
   max-width: 44em;
 }
 
+h2 {
+  font-size: 1.125em;
+  margin: 1.5em 0 0.25em;
+}
+
+h2 + * {
+  margin-top: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
