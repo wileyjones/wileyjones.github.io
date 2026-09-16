@@ -1,21 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Intuition easily justifies the bad assumptions that thrive in our knowledge gaps.">
-<meta name="author" content="Wiley Jones">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="stylesheet" href="/style.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Intuition easily justifies the bad assumptions that thrive in our knowledge gaps." name="description"/>
+<meta content="Wiley Jones" name="author"/>
+<link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/style.css" rel="stylesheet"/>
 <title>I avoid my intuition, it's usually wrong</title>
 </head>
 <body>
-
 <nav class="site"><a href="/">home</a></nav>
-
 <h1>I avoid my intuition, it's usually wrong</h1>
 <p class="byline">Wiley Jones</p>
-
 <p>
 
 Understanding your assumptions and thoroughly questioning them is crucial to
@@ -30,9 +28,6 @@ a particularly weird bug because we had another set of these already implemented
 and they didn’t have this problem. We started looking into the code to see if it
 was issue with how we were counting the <a href="https://unix.stackexchange.com/questions/17998/what-are-software-and-hardware-interrupts-and-how-are-they-processed" rel="noopener" target="_blank">interrupts</a>.<br/><br/>
 </p>
-
-<img alt="" src="http://rohmfs.rohm.com/en/products/images/faq/opto/optical_sensor/common/faq_01.gif"/>
-<br/><br/>
 <p>
 
 After some careful examination of the software, we started looking at the
@@ -48,18 +43,11 @@ So we attached analog leads to the output of our sensor. We blocked and unblocke
 it, expecting to see the false pulse train leading up to the actual pulse. Nope.
 Perfectly clean rising and falling edges on each of the implementations, exactly
 the same way. We were very confused.<br/><br/>
-
-<img alt="" src="http://www.hho4free.com/images/duty_cycle.png"/>
+</p>
+<img alt="Logic analyzer capture of the sensor output" src="assets/fig1.PNG"/>
 <br/><br/>
-
-<img alt="" src="assets/fig1.PNG"/>
-<br/><br/>
-
-<img alt="" src="assets/fig2.PNG"/>
-<br/><br/>
-
-<img alt="" src="assets/fig3.PNG"/>
-<br/><br/>
+<img alt="Logic analyzer capture of the false pulse train" src="assets/fig2.PNG"/>
+<img alt="Logic analyzer capture of the trailing pulses" src="assets/fig3.PNG"/>
 <p>
 
 This is painful to recount because the solution now appears so
@@ -81,11 +69,11 @@ we figured out the problem. The <a href="http://howtomechatronics.com/how-it-wor
 analyzer and on our MCU were getting triggered by the rising and falling edges
 of the sensor being blocked and unblocked. This is a pretty common occurrence
 and it can usually be resolved by low-pass filtration in hardware right before
-the signal enters the MCU.<br/><br/>
-
-<p>Schmitt Trigger Edge Detection</p>
-<img alt="" src="http://howtomechatronics.com/wp-content/uploads/2015/08/Non-Symmetrical-Schmitt-Trigger.png"/>
-<br/><br/>
+the signal enters the MCU.</p>
+<figure>
+<img alt="Non-symmetrical Schmitt trigger edge detection" src="https://howtomechatronics.com/wp-content/uploads/2015/08/Non-Symmetrical-Schmitt-Trigger.png"/>
+<figcaption>Schmitt trigger edge detection</figcaption>
+</figure>
 <p>
 
 The reason the count on the other implementation appeared correct was because we were performing <a href="http://www.robotoid.com/appnotes/circuits-quad-encoding.html" rel="noopener" target="_blank">quadrature
@@ -94,26 +82,19 @@ in the other direction. The false pulses one on sensor offset the false pulses
 on the other since these were being used in conjunction. This is a little
 technical and very specific to our application but it basically masked the fact
 that the sensors had all the extra triggers because the end result always
-appeared correct.<br/><br/>
-
-<p>Quadrature Encoder Waveforms</p>
-<img alt="" src="http://www.robotoid.com/appnotes/images/quad-encoding-waveform.png"/>
-<br/><br/>
+appeared correct.</p>
 <p>
 
 We were really confused by all the evidence presented to us simply because of the assumptions we were making. Multiple logical
 explanations could be presented but would conflict one another. Keep an eye out
 for these type of inconsistencies, as they’re a strong indicator of bad of
-assumptions.
-
-<br/><br/><p><a>— </a>10.22.2017<br/><br/></p>
-</p></p></p></p>
+assumptions.</p>
+<p class="muted">— 10.22.2017</p>
 <footer>
-  <a href="/">home</a>
-  <a href="https://twitter.com/wileycwj">Twitter</a>
-  <a href="https://github.com/wileyjones">GitHub</a>
-  <a href="https://www.linkedin.com/in/wileycwjones">LinkedIn</a>
+<a href="/">home</a>
+<a href="https://twitter.com/wileycwj">Twitter</a>
+<a href="https://github.com/wileyjones">GitHub</a>
+<a href="https://www.linkedin.com/in/wileycwjones">LinkedIn</a>
 </footer>
-
 </body>
 </html>
