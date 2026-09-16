@@ -19,6 +19,17 @@ h2 + * {
   margin-top: 0.75em;
 }
 
+.cv-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1em;
+  align-items: baseline;
+}
+
+.cv-dates {
+  white-space: nowrap;
+}
+
 img {
   max-width: 100%;
   height: auto;
