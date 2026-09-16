@@ -1,54 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Personal website and portfolio of Wiley Jones. Follow me on Twitter @wileycwj !">
-    <meta name="author" content="Wiley Jones">
-    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Nonlinear control theory investigations by Wiley Jones: Simple Pendulum Phase Portraits">
+<meta name="author" content="Wiley Jones">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="stylesheet" href="/style.css">
+<title>Simple Pendulum Phase Portraits</title>
+</head>
+<body>
 
-    <title>wileyjones.com</title>
+<nav class="site"><a href="/">home</a> <a href="/ECE397/pages/ece397main.html">nonlinear control</a></nav>
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<h1>Simple Pendulum Phase Portraits</h1>
 
-    <!-- Custom styles for this template -->
-    <link href="portfolio-397_0.css" rel="stylesheet">
-    <!-- Font Awesome CDN -->
-    <script src="https://use.fontawesome.com/4feeafbd3c.js"></script>
-
-    <!-- GoogleAnalytics -->
-    <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-65621725-1', 'auto');
-          ga('send', 'pageview');
-
-    </script>
-
-  </head>
-
-  <body>
-
-    <div class="project text-center">
-      <h1>Simple Pendulum Phase Portraits</h1>
-    </div>
-
-      <div class="jumbotron center">
-
-          <div class="project">
-            <div class="row">
-              <p class="text-muted">
+<p>
                 When investigating a given system's trajectories and dynamics it
                 is often not intuitive how the system generally behaves. Even after
                 solving the state space and finding the eigenvalues and eigenvectors that
                 give information about the stability, it is still hard to visualize what
-                is occurring for a given set of trajectories.<br><br>
+                is occurring for a given set of trajectories.<br/><br/>
 
                 In the special case of second-order systems, a phase portrait is particularly
                 useful. It plots the system trajectories as contours over a timespan along the X and Y axes
@@ -56,23 +28,23 @@
                 case of nonlinear systems, phase portraits are particularly useful
                 because they do no require any linearization or elimination of nonlinear terms.
                 The phase portraits is able to perfectly capture all of the nonlinear trajectories
-                and display them in a way that would be otherwise difficult.<br><br>
+                and display them in a way that would be otherwise difficult.<br/><br/>
 
                 The simple pendulum is a great example of a second-order nonlinear system that can
                 be easily visualized by the phase portrait. The simple pendulum is often linearized using
                 the small-angle approximation and converted into a linear form of <code>zdot = A*z</code> where
                 <code>A</code> is a matrix of scalars. Instead, the phase portrait method
-                leaves the simple pendulum state space in its nonlinear form as <code>sin(θ)</code>.<br><br>
+                leaves the simple pendulum state space in its nonlinear form as <code>sin(θ)</code>.<br/><br/>
 
                 It is worth noting that the inherent limitation of phase portraits is that they only
                 applicable in second-order or lower systems. However, it cannot be asserted
                 enough how effective phase portraits are at giving quick analysis for even
-                highly-nonlinear systems.<br><br>
+                highly-nonlinear systems.<br/><br/>
 
                 The code below provide phase portraits for various dampened and undampened
                 simple pendulum scenarios. Notice how the dampened trajectories converge
                 to a point while the undampened ones form concentric contours, formally known as
-                <a target="_blank" href="https://en.wikipedia.org/wiki/Limit_cycle">limit cycles</a>.
+                <a href="https://en.wikipedia.org/wiki/Limit_cycle" rel="noopener" target="_blank">limit cycles</a>.
                 Also, notice how for the larger dampening coefficient, the trajectories converge to a point
                 much quicker, with fewer rotations around. This reflects our intution that a
                 pendulum with more friction (a larger dampening coefficient) will come to rest faster.
@@ -80,22 +52,11 @@
                 in the undampened figures show that without any friction, the pendulum will continue
                 to swing around the equilibrium point forever. It is clear why phase portraits
                 are a powerful tool for analyzing nonlinear systems, read more about
-                them <a target="_blank" href="https://en.wikipedia.org/wiki/Phase_portrait">here</a>.
+                them <a href="https://en.wikipedia.org/wiki/Phase_portrait" rel="noopener" target="_blank">here</a>.
               </p>
-            </div>
-          </div>
 
-          <!--<div class="col-lg-8">
-            <p id="social" class="text-muted">Interested in frontier technologies with an affinity for the intersection of artifical intelligence and robotics. Currently I'm working in consulting and venture capital.
-            <br><br>Feel free to reach out to me by <a target="_blank" href="mailto:wjones700@gmail.com">email</a> if you'd like to chat.</p>
-          </div>
-          <div class="col-lg-4">
-            <img src='bio.jpg' class="img-rounded center">
-            <a target="_blank" href="http://wileyjones.com/listfolio">
-          </div>
-        </div>-->
-        <div> <!-- addding in code -->
-          <pre><code>
+ 
+<pre><code>
             % Script for Plotting the Phase Portrait of a Nonlinear Pendulum
 
             % init system and states
@@ -145,13 +106,10 @@
             axis([-5 5 -2*pi 2*pi])
             grid on
 
-
             hold off
           </code></pre>
-        </div>
 
-        <div> <!-- addding in code -->
-          <pre><code>
+<pre><code>
             % Script for Plotting the Phase Portrait of a Dampened Nonlinear Pendulum
             % Change the state space to include "b" dampening coefficient
 
@@ -164,54 +122,22 @@
             THETA2 = linspace(-2*pi,2*pi,25);
 
           </code></pre>
-        </div>
 
-        <div> <!-- gif embed -->
-          <div class="row">
-            <div class="col-lg-6">
-              <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/pp_2.jpg"></div>
-            </div>
-            <div class="col-lg-6">
-              <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/pp_damp.jpg"></div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/pp_damp_ratios.jpg"></div>
-            </div>
-            <div class="col-lg-6">
-              <div id="gif-embed" class="img-responsive text-center"><img class="text-center" src="../figs/pp_vs.jpg"></div>
-            </div>
-          </div>
-        </div>
+<img alt="" src="../figs/pp_2.jpg"/>
 
-        <!--<div class="projects">
-                      <h2 class="text-center">Fig. 4</h2>
-            <div class="container well project">
-              <div class="project text-center">
-                <p><a href="http://wileyjones.com/twitterProject/index">Phase Portraits of Harmonic Pendulum</a></p>
-              </div>
-              <div class="project text-center">
-                <p><a href="http://wileyjones.com/weatherApp/index">Weather API Project</a></p>
-              </div>
-              <div class="project text-center">
-                <p><a href="http://wileyjones.com/gMaps/google-maps">MechSe Student Map</a></p>
-              </div>
-            </div>
-        </div>-->
+<img alt="" src="../figs/pp_damp.jpg"/>
 
+<img alt="" src="../figs/pp_damp_ratios.jpg"/>
 
-      </div>
+<img alt="" src="../figs/pp_vs.jpg"/>
 
+<p>© 2016 Wiley Jones</p>
+<footer>
+  <a href="/">home</a>
+  <a href="https://twitter.com/wileycwj">Twitter</a>
+  <a href="https://github.com/wileyjones">GitHub</a>
+  <a href="https://www.linkedin.com/in/wileycwjones">LinkedIn</a>
+</footer>
 
-      <footer class="footer text-center">
-        <p>&copy; 2016 Wiley Jones</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+</body>
 </html>
