@@ -11,6 +11,12 @@ img {
   height: auto;
 }
 
+small,
+pre,
+code {
+  font-size: inherit;
+}
+
 pre {
   overflow-x: auto;
   white-space: pre;
